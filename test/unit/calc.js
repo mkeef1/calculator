@@ -39,10 +39,16 @@ describe('Calc', function(){
       expect(trip).to.equal(10);
     });
    });
-  describe('.mean', function(){
-    it('should return the mean of the array', function(){
-      var mean = Calc.mean([4, 5, 7, 8]);
-      expect(mean).to.equal(6);
+    describe('.mean', function(){
+        it('should return the mean of the array', function(){
+        var mean = Calc.mean([4, 5, 7, 8]);
+        expect(mean).to.equal(6);
+      });
+      });
+    describe('.stdev', function(){
+      it('should return the standard deviation', function(){
+        var stdev = Calc.stdev([2,4,4,4,5,5,7,9]);
+        expect(stdev).to.equal(2);
     });
   });
 });

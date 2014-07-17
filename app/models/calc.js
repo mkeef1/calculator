@@ -45,4 +45,14 @@ Calc.mean = function(a){
   }
   return total/a.length;
 };
+
+Calc.stdev = function(a){
+  var meanDiffs = [];
+  for ( var i = 0; i < a.length; i++){
+    meanDiffs.push( Math.pow((a[i] - Calc.mean(a)),2));
+  }
+  var stdev = Math.sqrt(Calc.mean(meanDiffs));
+  return stdev;
+};
+
 module.exports = Calc;
